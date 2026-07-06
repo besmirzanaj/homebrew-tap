@@ -1,25 +1,25 @@
 class Dnsglobe < Formula
   desc "Global DNS propagation checker TUI — watch a DNS record propagate across 39 public resolvers worldwide, on a world map in your terminal"
   homepage "https://github.com/besmirzanaj/dnsglobe"
-  version "0.2.5"
+  version "0.2.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.5/dnsglobe-aarch64-apple-darwin.tar.gz"
-      sha256 "ff89de1952fa96f83d75537e6c1f879ace5423db7345fc9917fad944dc897a23"
+      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.6/dnsglobe-aarch64-apple-darwin.tar.gz"
+      sha256 "27a45179222975cff9af63ee27aab3f06f159255059995bb1e0ff774eb9b8750"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.5/dnsglobe-x86_64-apple-darwin.tar.gz"
-      sha256 "9dc30a6dc2113a7edea21146d9cbb020773dd1d4d86bf4fc00cc0eb9bde69168"
+      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.6/dnsglobe-x86_64-apple-darwin.tar.gz"
+      sha256 "840d929b8d6efe282643472b9a1b442a474633a7caad1d263f2f09f04f4ab091"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.5/dnsglobe-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c5cfbf6bf42c99b087eb7b8ee23eed230459c762617ed8a7963865c85d14869c"
+      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.6/dnsglobe-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "3681c775005c6327f7ea23f33622dce63d25c47eb0a8be0a55463badf8a24041"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.5/dnsglobe-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "418182e56495305d0613c787993afde4fcac1e89db966616c94c3903c6a9dfce"
+      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.6/dnsglobe-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "1938240e4afa9b1e7d6cda3af3a078844d1e0af16cd55e9df050d03e22644766"
     end
   end
   license "MIT"
