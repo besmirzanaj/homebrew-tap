@@ -5,21 +5,21 @@ class Dnsglobe < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.6/dnsglobe-aarch64-apple-darwin.tar.gz"
-      sha256 "b76bbdc5913bf5b3a7059e475c03b9f0690df7ad1f95b00d9c09db6f540d952e"
+      sha256 "f9bbe0595502de73c5f3ac88b40c8d05975b4ed88dd4838407f695920a85ede0"
     end
     if Hardware::CPU.intel?
       url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.6/dnsglobe-x86_64-apple-darwin.tar.gz"
-      sha256 "80151cf899f1f6cb8efc52a58dffda4b3ee35d9eacb2c8c38c3761edc7d088e8"
+      sha256 "22502d14255df98749f8433f7d1b5314c19ecf3b375fb5f49651a4d277fea756"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.6/dnsglobe-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e2b7472441bec074f731ca541ea26b4db1d63cca5d432f6b754364d468f3d2df"
+      sha256 "af1d6406ce30c0b06f62e9588eaf1a4c57bb2dedd21535118bc7a86d1738ba80"
     end
     if Hardware::CPU.intel?
       url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.6/dnsglobe-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "f3bb264318ecb002dfa76107f93341641ea3a7febf4dc46712d280bd84e07b9a"
+      sha256 "323cef4070c3d353f8a9277b55e5b7c75e7250f28e074d3db84549cef2b1d34c"
     end
   end
   license "MIT"
