@@ -1,25 +1,25 @@
 class Dnsglobe < Formula
-  desc "Global DNS propagation checker TUI — watch a DNS record propagate across 40 public resolvers worldwide, on a world map in your terminal"
+  desc "Global DNS propagation checker TUI — watch a DNS record propagate across 39 public resolvers worldwide, on a world map in your terminal"
   homepage "https://github.com/besmirzanaj/dnsglobe"
-  version "0.2.2"
+  version "0.2.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.2/dnsglobe-aarch64-apple-darwin.tar.xz"
-      sha256 "252b625e7d052a80aa608034f6bded766e8e76e21f9e90bd31263d1f07212374"
+      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.3/dnsglobe-aarch64-apple-darwin.tar.xz"
+      sha256 "f3aef00c955fb1c881676c9b6ee87000c3556953f1ebe547dfb48d1964a67269"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.2/dnsglobe-x86_64-apple-darwin.tar.xz"
-      sha256 "71ce4f7f32713fc865dd64954df143efd65f493e41d141744da4f60445746301"
+      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.3/dnsglobe-x86_64-apple-darwin.tar.xz"
+      sha256 "2b941482758346da8bbb338c4059d3dd7f554a2226e182273c2c2bf42609776b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.2/dnsglobe-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "071ec7e97457f627d119e236f4f6a94fbb05d5b4a384a3eecfae468c9e20fb06"
+      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.3/dnsglobe-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "bd2b84cb14957c9d95df7bb08abbb5fe12c97f93439bef34a4f35cd61c00c3a9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.2/dnsglobe-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a42d243ce826420563d8a852b4d8bcf5a856b2114622ce9a7b0a6d4f67ace4db"
+      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.2.3/dnsglobe-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d2b66df45aa7b2609a9734b18b54d3edd8be49f3cb6663feba6b61913388ceab"
     end
   end
   license "MIT"
