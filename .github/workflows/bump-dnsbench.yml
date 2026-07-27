@@ -1,0 +1,24 @@
+name: Bump dnsbench
+
+# Weekly check for a newer ialexsilva/dnsbench-cli release. If found, the script
+# regenerates Formula/dnsbench.rb (version + sha256s) and commits it to main.
+# A failed run (e.g. upstream renamed assets) emails the repo owner, which is
+# itself a useful signal.
+
+on:
+  schedule:
+    - cron: "0 7 * * 1" # Mondays 07:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bump dnsbench if a newer release exists
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash .github/scripts/bump-dnsbench.sh
