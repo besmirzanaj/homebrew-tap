@@ -1,25 +1,25 @@
 class Dnsglobe < Formula
   desc "Global DNS propagation checker TUI — watch a DNS record propagate across 39 public resolvers worldwide, on a world map in your terminal"
   homepage "https://github.com/besmirzanaj/dnsglobe"
-  version "0.4.1"
+  version "0.5.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.4.1/dnsglobe-aarch64-apple-darwin.tar.gz"
-      sha256 "a149c9870cb6ca2f84fa0ca4f9794f8d343f7b8599d7f178d4d309520057e985"
+      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.5.1/dnsglobe-aarch64-apple-darwin.tar.gz"
+      sha256 "c4d8113a8766c42290a47a1ebe02ad8f2ea7891a46524b200ad58e7a1eec98ee"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.4.1/dnsglobe-x86_64-apple-darwin.tar.gz"
-      sha256 "5feca7c0a44dd48a4478bce538aa547c0fe2ad3ab9a30a5dd96dae2ae52f1461"
+      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.5.1/dnsglobe-x86_64-apple-darwin.tar.gz"
+      sha256 "fc6bb141ca3f0b649485aecea0847e051ade10cb5d03ffa99ae6ee26440a2f21"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.4.1/dnsglobe-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "07b0d73e0566bf1699b1e79cc42e43c90e49f6cbec77da4af2aeac87a7fd5b40"
+      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.5.1/dnsglobe-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "b16be80a3c2be5731d069faa5826e5a50eb7c7710e36ea458c9b1583b21ad8a2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.4.1/dnsglobe-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3a192a87c64551f5d69bb84fc6deb75eeb9aa4c9493d636365f4a0ff20d09520"
+      url "https://github.com/besmirzanaj/dnsglobe/releases/download/v0.5.1/dnsglobe-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a3d0e55215215047b1d6218245bbedb5bfe5cfeffcbe8dcca3ef869a7563352e"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Dnsglobe < Formula
   end
 
   def install
-    bin.install "dnsglobe" if OS.mac? && Hardware::CPU.arm?
-    bin.install "dnsglobe" if OS.mac? && Hardware::CPU.intel?
-    bin.install "dnsglobe" if OS.linux? && Hardware::CPU.arm?
-    bin.install "dnsglobe" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "dnsglobe"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "dnsglobe"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "dnsglobe"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "dnsglobe"
+    end
 
     install_binary_aliases!
 
